@@ -1,5 +1,23 @@
 # Disaster Response Pipeline Project
 
+### Description
+
+In this course, I've learned and built on data engineering skills to expand opportunities and potential as a data scientist. In this project, I have apply these skills to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
+
+### Project Components
+There are three components in this project.
+
+#### 1. ETL Pipeline
+
+#### 2. ML Pipeline
+
+#### 3. Flask Web App
+
+### Screenshots:
+
+![P1](/photo/p1.png)
+![P2](/photo/p2.png)
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
