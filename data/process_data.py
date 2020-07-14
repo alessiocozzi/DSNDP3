@@ -6,6 +6,9 @@ import numpy as np
 
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    This function allows to load the data from filepath for both messages and categories
+    '''
     mes_df = pd.read_csv(messages_filepath)
     cat_df = pd.read_csv(categories_filepath)
     df_main = pd.merge(mes_df,cat_df,on='id')
@@ -13,6 +16,9 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    '''
+    This function allows to clean the dataframe previously created in order to format it correctly
+    '''
     cat_df = df.categories.str.split(pat=';',expand=True)
     row_one = cat_df.iloc[0,:]
     cat_cols = row_one.apply(lambda x:x[:-2])
@@ -27,11 +33,17 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    '''
+    This function allows to save the dataframe to sqlite database
+    '''
     db_engine = create_engine('sqlite:///'+ database_filename)
     df.to_sql('DisasterResponse', db_engine, index=False)  
 
 
 def main():
+    '''
+    This is the starting of the python file in order to load, clean and store the data into sqlite
+    '''
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
