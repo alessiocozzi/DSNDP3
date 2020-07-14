@@ -56,7 +56,7 @@ def tokenize(text):
 
 
 def build_model():
-    '''
+    ''' 
     Desc: model to predict category of text based on categories (36 categories available)
     Params: no parameters
     Return: model to predict classifications (36 categories available)
